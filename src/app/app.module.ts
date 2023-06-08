@@ -8,18 +8,22 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceService } from './service.service';
+import { GetbyidComponent } from './getbyid/getbyid.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInComponent,
     SignUpComponent,
-    FormComponent
+    FormComponent,
+    GetbyidComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

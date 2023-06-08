@@ -1,1 +1,25 @@
 <p>form works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Designation</th>
+            <th>Salary</th>
+            <th>Experience</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of getdata">
+            <td>{{e.username}}</td>
+            <td>{{e.designation}}</td>
+            <td>{{e.salary}}</td>
+            <td>{{e.experience}}</td>
+            <td>
+                <button (click)="edit(e.id)">Edit</button>
+                <button >Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

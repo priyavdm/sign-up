@@ -6,5 +6,22 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ServiceService {
 
-  constructor() { }
+  url='http://localhost:3000';
+
+  constructor(private http:HttpClient) { }
+
+  get(){
+    return this.http.get(this.url+ '/getall')
+  }
+  insert(insertbody:any){
+    return this.http.post(this.url+ '/insert',insertbody)
+  }
+  edit(id:any){
+    return this.http.get(this.url+ '/edit/' +id)
+  }
+  update(updatebody:any){
+    return this.http.put(this.url+ '/update',updatebody)
+  }
+
+
 }
